@@ -1,0 +1,81 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.wrapper
+{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container
+{
+    height: 100vh;
+    background-color: darkgrey;
+    border: 5px solid darkgrey;
+    display: grid;
+    grid-template-columns: 120px repeat(2,1fr);
+    grid-template-rows:80px 1fr 80px ;
+    gap: 10px;
+}
+
+section{
+    background-color: bisque;
+    border: 3px solid black;
+}
+
+.header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight:bolder;
+    font-size: larger;
+    grid-area: 1/1/2/4;
+}
+
+.ft
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight:bolder;
+    font-size: larger;
+    grid-area: 3/1/4/4;
+}
+
+.main{
+    background-color: blue;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    font-weight:bolder; */
+    grid-area:2/2/3/4;
+    /* nexted grid next */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    /* next line is new concept */
+    grid-auto-rows: minmax(150px,auto);
+    gap: 10px;
+}
+
+.box
+{
+    margin: 5px;
+    background-color: chocolate;
+    border: 2px solid black;
+    /* height: 180px;
+    width: 550px; */
+}
+
+.sb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    font-weight:bolder;
+}
